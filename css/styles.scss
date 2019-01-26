@@ -1,0 +1,65 @@
+---
+header_image_url: ../img/header.jpg
+---
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, section, footer {
+    padding: 7.5%;
+}
+
+header {
+    background-image: url({{ page.header_image_url }});
+    background-size: cover;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    color: #eee;
+}
+
+h2, h3, p, label {
+    color: #333;
+}
+
+h1, h2 {
+    font-family: Passion One, Helvetica, sans-serif;
+}
+
+h4, p, label {
+    font-family: Lora, serif;
+}
+
+h1, h4 {
+    text-shadow: 0 0 2.5px #222;
+}
+
+h1 {
+    font-size: 4.25rem;
+    line-height: 85%;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.3rem;
+    padding: 1.5rem 5%;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+p, label {
+    margin: .25rem 0 .5rem;
+    font-size: 1.05rem;
+    line-height: 140%;
+}
+
+input {
+    display: block;
+}
