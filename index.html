@@ -1,0 +1,87 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="We Are America">
+        <!--TODO: other meta tags-->
+        
+        <!--TODO: favicon-->
+        
+        <title>{{site.title}}</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <!--TODO: background photo is cover w/o text-->
+            <h1>{{site.title}}</h1>
+            <h4>{{site.description}}</h4>
+        </header>
+        
+        <section>
+            <aside>
+                <h2>{{site.stories_section_title}}</h2>
+                <p>{{site.stories_section_description}}</p>
+            </aside>
+
+            <div id="stories-container" class="container">
+                {% for story in site.stories_data %}
+                <article>
+                    <img src="{{story.photo_url}}" alt="{{story.author}}" class="portrait">
+
+                    <div class="caption">
+                        <div class="story-info">
+                            <h3>{{story.title}}</h3>
+                            <p>{{story.author}}</p>
+                        </div>
+                        
+                        <a class="play-circle">
+                            <div class="play-triangle"></div>
+                        </a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <aside>
+                <h2>{{site.ig_section_title}}</h2>
+                <p>{{site.ig_section_description}}</p>
+            </aside>
+
+            <div id="ig-container" class="container">
+                Instagram posts
+            </div>
+        </section>
+
+        <section>
+            <h2>{{site.contact_section_title}}</h2>
+            <p>{{site.contact_section_description}}</p>
+
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text" id="name" />
+        
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" />
+        
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" />
+        
+                <label for="body">Message Body:</label>
+                <input type="text" id="body" />
+            </form>
+        </section>
+
+        <footer>
+            <p>footer notes</p>
+        </footer>
+    </body>
+</html>

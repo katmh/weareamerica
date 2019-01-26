@@ -1,0 +1,14 @@
+title: We Are America
+description: We Are America description
+
+stories_section_title: Listen
+stories_section_description: Description of project
+
+ig_section_title: Look
+ig_section_description: We went to AL
+
+contact_section_title: Connect
+contact_section_description: Buy our book, let us know about speaking engagements
+
+collections:
+  - stories_data
