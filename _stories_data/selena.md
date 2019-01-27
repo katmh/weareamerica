@@ -1,7 +1,7 @@
 ---
 title: Endings
 author: Selena Chau
-photo_url: 
+photo_url: "/portraits/Selena-min.jpg"
 audio_url:
 ---
 

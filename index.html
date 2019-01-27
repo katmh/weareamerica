@@ -14,12 +14,12 @@
         
         <title>{{site.title}}</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Passion+One:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Passion+One:400,700" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
-        <header class="container">
+        <header>
             <!--TODO: background photo is cover w/o text-->
             <h1>{{site.title}}</h1>
             <h4>{{site.description}}</h4>
@@ -34,7 +34,7 @@
             <div id="stories-container" class="container">
                 {% for story in site.stories_data %}
                 <article>
-                    <img src="{{story.photo_url}}" alt="{{story.author}}" class="portrait">
+                    <img src="{{story.photo_url | prepend:site.url}}" alt="{{story.author}}" class="portrait">
 
                     <div class="caption">
                         <div class="story-info">
@@ -48,6 +48,8 @@
                     </div>
                 </article>
                 {% endfor %}
+
+                <a href="" class="button">Browse More Stories</a>
             </div>
         </section>
 
@@ -79,6 +81,8 @@
                 <label for="body">Message Body:</label>
                 <input type="text" id="body" />
             </form>
+
+            <a href="" class="button">Submit</a>
         </section>
 
         <footer>
