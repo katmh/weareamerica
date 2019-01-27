@@ -1,5 +1,5 @@
 ---
-header_image_url: ../img/header.jpg
+header_image_url: ../img/header-dark-min.jpg
 ---
 
 * {
@@ -9,11 +9,12 @@ header_image_url: ../img/header.jpg
 }
 
 header, section, footer {
-    padding: 7.5%;
+    padding: 7.5% 5%;
 }
 
 header {
     background-image: url({{ page.header_image_url }});
+    background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     padding-top: 5rem;
@@ -35,7 +36,7 @@ h4, p, label {
 }
 
 h1, h4 {
-    text-shadow: 0 0 2.5px #222;
+    text-shadow: 0 0 2.5px rgba(.8, .8, .8, .5);
 }
 
 h1 {
