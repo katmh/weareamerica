@@ -65,6 +65,14 @@ article {
     margin: 2rem 0;
 }
 
+article:nth-child(n+6) {
+    display: none;
+}
+
+.visible {
+    display: block !important;
+}
+
 .portrait {
     width: 100%;
 }

@@ -436,7 +436,7 @@
                 </article>
                 
 
-                <a href="" class="button">Browse More Stories</a>
+                <a class="button" id="more-stories-button">Browse More Stories</a>
             </div>
         </section>
 
@@ -475,5 +475,16 @@
         <footer>
             <p>footer notes</p>
         </footer>
+
+        <script>
+            hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
+            console.log(hiddenArticles);
+
+            document.getElementById('more-stories-button').addEventListener('click', function() {
+                hiddenArticles.forEach((article) => {
+                    article.classList.add('visible');
+                })
+            });
+        </script>
     </body>
 </html>

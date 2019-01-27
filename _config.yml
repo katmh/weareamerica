@@ -1,7 +1,7 @@
 title: We Are America
 description: We Are America is a project by the Seminar in American Diversity class at Lowell High School in MA. This is a concise and interesting description of the project.
 
-url: katmh.com/weareamerica
+url: https://katmh.com/weareamerica
 # all URLs are relative and must begin with a slash
 
 stories_section_title: Listen
@@ -17,4 +17,5 @@ sass:
   style: compressed
 
 collections:
-  - stories_data
+  stories_data:
+    output: true
