@@ -4,35 +4,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="We Are America">
-        <!--TODO: other meta tags-->
-        
+        <meta name="title" content="We Are America">
+        <meta name="description" content="A project by the Seminar in American Diversity class at Lowell High School in Massachusetts."> 
         <!--TODO: favicon-->
-        
         <title>We Are America</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Passion+One:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Oswald:700" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
         <header>
-            <!--TODO: background photo is cover w/o text-->
             <h1>We Are America</h1>
-            <h4>We Are America is a project by the Seminar in American Diversity class at Lowell High School in Massachusetts.</h4>
+            <h4>A project by the Seminar in American Diversity class at Lowell High School in Massachusetts.</h4>
+
+            
         </header>
         
         <section>
-            <aside>
-                <h2>Listen</h2>
-                <p>Each student in our class has shared a 5-minute, true story from their life. This paragraph will explain what the stories are and their purpose.</p>
-            </aside>
-
             <div id="stories-container" class="container grid">
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Makayla-min.jpg" alt="Makayla Heang" class="portrait">
 
                     <div class="caption">
@@ -47,7 +43,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Lexi-min.jpg" alt="Alexia Cummings" class="portrait">
 
                     <div class="caption">
@@ -62,7 +58,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Alicia-min.jpg" alt="Alicia Gonzalez" class="portrait">
 
                     <div class="caption">
@@ -77,7 +73,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Aliyah-min.jpg" alt="Aliyah Andino" class="portrait">
 
                     <div class="caption">
@@ -92,7 +88,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Areej-min.jpg" alt="Areej Jameel" class="portrait">
 
                     <div class="caption">
@@ -107,7 +103,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Camila-min.jpg" alt="Camila Garcia Marin" class="portrait">
 
                     <div class="caption">
@@ -122,7 +118,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Diane-min.jpg" alt="Diane Chikulu" class="portrait">
 
                     <div class="caption">
@@ -137,7 +133,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Emil-min.jpg" alt="Emil Mora" class="portrait">
 
                     <div class="caption">
@@ -152,7 +148,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Ezequiel-min.jpg" alt="Ezequiel Nunez" class="portrait">
 
                     <div class="caption">
@@ -167,7 +163,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Giulia-min.jpg" alt="Giulia Silveira" class="portrait">
 
                     <div class="caption">
@@ -182,7 +178,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Gustavo-min.jpg" alt="Gustavo Figueiredo" class="portrait">
 
                     <div class="caption">
@@ -197,7 +193,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Idalisse-min.jpg" alt="Idalisse Fernandez" class="portrait">
 
                     <div class="caption">
@@ -212,7 +208,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Kat-min.jpg" alt="Katherine Mary Huang" class="portrait">
 
                     <div class="caption">
@@ -227,7 +223,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Keely-min.jpg" alt="Keely O'Beirne" class="portrait">
 
                     <div class="caption">
@@ -242,7 +238,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Lucie-min.jpg" alt="Lucie Rwakabuba" class="portrait">
 
                     <div class="caption">
@@ -257,7 +253,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Lucy-min.jpg" alt="Luixiana Gonzalez Vargas" class="portrait">
 
                     <div class="caption">
@@ -272,7 +268,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Lynsey-min.jpg" alt="Lynsey Ida Philippe" class="portrait">
 
                     <div class="caption">
@@ -287,7 +283,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Mariama-min.jpg" alt="Mariama Jalloh" class="portrait">
 
                     <div class="caption">
@@ -302,7 +298,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Marida-min.jpg" alt="Marida Meas" class="portrait">
 
                     <div class="caption">
@@ -317,7 +313,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Mona-min.jpg" alt="Monaliza Pace" class="portrait">
 
                     <div class="caption">
@@ -332,7 +328,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Monika-min.jpg" alt="Monika Matsui" class="portrait">
 
                     <div class="caption">
@@ -347,7 +343,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Philly-min.jpg" alt="Philly Marte" class="portrait">
 
                     <div class="caption">
@@ -362,7 +358,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Ricardo-min.jpg" alt="Ricardo Vargas" class="portrait">
 
                     <div class="caption">
@@ -377,7 +373,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Ricky-min.jpg" alt="Richard Thyne" class="portrait">
 
                     <div class="caption">
@@ -392,7 +388,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Selena-min.jpg" alt="Selena Chau" class="portrait">
 
                     <div class="caption">
@@ -407,7 +403,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Thatsani-min.jpg" alt="Thatsani Srithong" class="portrait">
 
                     <div class="caption">
@@ -422,7 +418,7 @@
                     </div>
                 </article>
                 
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="http://localhost:4000/portraits/Yousif-min.jpg" alt="Yousif Albuset" class="portrait">
 
                     <div class="caption">
@@ -442,8 +438,8 @@
             </div>
         </section>
 
-        <section>
-            <h2>Connect</h2>
+        <section id="contact">
+            <h2>Connect With Us</h2>
             <p>Buy our book, let us know about speaking engagements. Fill out the form to reach us if you have any questions or comments.</p>
 
             <form action="">
@@ -464,13 +460,24 @@
         </section>
 
         <script>
-            hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
+            /* hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
             console.log(hiddenArticles);
 
             document.getElementById('more-stories-button').addEventListener('click', function() {
                 hiddenArticles.forEach((article) => {
                     article.classList.add('visible');
                 })
+            }); */
+
+            var grid = document.querySelector('.grid');
+            var msnry = new Masonry( grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                gutter: '.gutter-sizer',
+                percentPosition: true
+            });
+            imagesLoaded( grid ).on( 'progress', function() {
+                msnry.layout();
             });
         </script>
     </body>

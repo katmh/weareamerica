@@ -7,35 +7,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="We Are America">
-        <!--TODO: other meta tags-->
-        
+        <meta name="title" content="{{site.title}}">
+        <meta name="description" content="{{site.description}}"> 
         <!--TODO: favicon-->
-        
         <title>{{site.title}}</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Passion+One:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Oswald:700" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
         <header>
-            <!--TODO: background photo is cover w/o text-->
             <h1>{{site.title}}</h1>
             <h4>{{site.description}}</h4>
+
+            {% for link in site.header_links %}
+            <a href="{{link.url}}" class="button">{{link.title}}</a>
+            {% endfor %}
         </header>
         
         <section>
-            <aside>
-                <h2>{{site.stories_section_title}}</h2>
-                <p>{{site.stories_section_description}}</p>
-            </aside>
-
             <div id="stories-container" class="container grid">
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
                 {% for story in site.stories_data %}
-                <article class="grid-item">
+                <article class="story grid-item">
                     <img src="{{story.photo_url | prepend:site.url}}" alt="{{story.author}}" class="portrait">
 
                     <div class="caption">
@@ -55,7 +53,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="contact">
             <h2>{{site.contact_section_title}}</h2>
             <p>{{site.contact_section_description}}</p>
 
@@ -77,13 +75,24 @@
         </section>
 
         <script>
-            hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
+            /* hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
             console.log(hiddenArticles);
 
             document.getElementById('more-stories-button').addEventListener('click', function() {
                 hiddenArticles.forEach((article) => {
                     article.classList.add('visible');
                 })
+            }); */
+
+            var grid = document.querySelector('.grid');
+            var msnry = new Masonry( grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                gutter: '.gutter-sizer',
+                percentPosition: true
+            });
+            imagesLoaded( grid ).on( 'progress', function() {
+                msnry.layout();
             });
         </script>
     </body>

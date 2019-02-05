@@ -10,6 +10,14 @@ stories_section_description: Each student in our class has shared a 5-minute, tr
 contact_section_title: Connect With Us
 contact_section_description: Buy our book, let us know about speaking engagements. Fill out the form to reach us if you have any questions or comments.
 
+header_links:
+  - title: About
+    url: /about
+  - title: Instagram
+    url: https://instagram.com/lhsweareamerica
+  - title: Contact Us
+    url: #contact
+
 sass:
   style: compressed
 
