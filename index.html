@@ -14,11 +14,13 @@
         
         <title>{{site.title}}</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Passion+One:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Passion+One:400,700" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
         <header>
             <!--TODO: background photo is cover w/o text-->
             <h1>{{site.title}}</h1>
@@ -31,9 +33,9 @@
                 <p>{{site.stories_section_description}}</p>
             </aside>
 
-            <div id="stories-container" class="container">
+            <div id="stories-container" class="container grid">
                 {% for story in site.stories_data %}
-                <article>
+                <article class="grid-item">
                     <img src="{{story.photo_url | prepend:site.url}}" alt="{{story.author}}" class="portrait">
 
                     <div class="caption">
@@ -54,17 +56,6 @@
         </section>
 
         <section>
-            <aside>
-                <h2>{{site.ig_section_title}}</h2>
-                <p>{{site.ig_section_description}}</p>
-            </aside>
-
-            <div id="ig-container" class="container">
-                Instagram posts
-            </div>
-        </section>
-
-        <section>
             <h2>{{site.contact_section_title}}</h2>
             <p>{{site.contact_section_description}}</p>
 
@@ -79,15 +70,11 @@
                 <input type="text" id="subject" />
         
                 <label for="body">Message Body:</label>
-                <input type="text" id="body" />
+                <textarea id="body"></textarea>
             </form>
 
             <a href="" class="button">Submit</a>
         </section>
-
-        <footer>
-            <p>footer notes</p>
-        </footer>
 
         <script>
             hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
