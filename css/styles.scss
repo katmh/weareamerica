@@ -13,25 +13,60 @@ $body-font: Merriweather, Georgia, serif;
 
 header {
     background: url({{page.header_image_url}}) center/cover no-repeat fixed;
-    height: 60vh;
-    padding: 5%;
+    height: 100vh;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5% 2rem;
     color: #eee;
+    a.button { color: #eee }
+    p { font-size: 1.4rem !important }
 }
 
-h1, h4 {
-    margin-bottom: 0.25em;
+section {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-h1 { font-family: $header-font }
-h4 { font-family: $body-font }
+h1, h2, h3, a.button { font-family: $header-font }
+p { font-family: $body-font }
 
 h1 {
-    font-size: 7rem;
+    font-size: 4rem;
+    line-height: 80%;
     text-transform: uppercase;
+    margin-bottom: 0.4em;
 }
 
-h4 {
+h2 {
     font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+header nav {
+    margin-top: 3rem;
+}
+
+a.button {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+    
+    display: inline-block;
+    padding: 0.5rem 0 0.15rem;
+    margin-right: 1.5rem;
+    border-bottom: 2px solid transparent;
+
+    transition: .15s;
+}
+
+a.button:hover, a.button:active {
+    border-bottom: 2px solid #ccc;
 }
 
 #stories-container {
@@ -56,4 +91,34 @@ h4 {
 
 .portrait {
     width: 100%;
+    height: auto;
+    transition: .15s;
+    display: block;
+    position: relative;
+    z-index: -1;
+}
+
+.story {
+    overflow: hidden;
+}
+
+.story:hover .portrait {
+    transform: scale(1.15);
+}
+
+.caption {
+    background: #eee;
+    position: relative;
+    z-index: 10;
+    padding: .65rem .75rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    margin: .25rem 0;
+    font-size: 1.3rem;
+    line-height: 150%;
 }

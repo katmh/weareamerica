@@ -11,7 +11,7 @@
         <meta name="description" content="{{site.description}}"> 
         <!--TODO: favicon-->
         <title>{{site.title}}</title>
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Oswald:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Oswald:400,700" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
@@ -21,17 +21,22 @@
 
         <header>
             <h1>{{site.title}}</h1>
-            <h4>{{site.description}}</h4>
+            <h2>{{site.subtitle}}</h2>
 
-            {% for link in site.header_links %}
-            <a href="{{link.url}}" class="button">{{link.title}}</a>
-            {% endfor %}
+            <p>{{site.description}}</p>
+
+            <nav>
+                {% for link in site.header_links %}
+                <a href="{{link.url}}" class="button">{{link.title}}</a>
+                {% endfor %}
+            </nav>
         </header>
         
         <section>
             <div id="stories-container" class="container grid">
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
+                
                 {% for story in site.stories_data %}
                 <article class="story grid-item">
                     <img src="{{story.photo_url | prepend:site.url}}" alt="{{story.author}}" class="portrait">
@@ -49,29 +54,8 @@
                 </article>
                 {% endfor %}
 
-                <a class="button" id="more-stories-button">Show All Stories</a>
+                <!--<a class="button" id="more-stories-button">Show All Stories</a>-->
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>{{site.contact_section_title}}</h2>
-            <p>{{site.contact_section_description}}</p>
-
-            <form action="">
-                <label for="name">Name:</label>
-                <input type="text" id="name" />
-        
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" />
-        
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" />
-        
-                <label for="body">Message Body:</label>
-                <textarea id="body"></textarea>
-            </form>
-
-            <a href="" class="button">Submit</a>
         </section>
 
         <script>
