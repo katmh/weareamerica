@@ -22,7 +22,6 @@ header {
 
     color: #eee;
     a { color: #eee }
-    p { font-size: 1.4rem !important }
 }
 
 section {
@@ -49,7 +48,7 @@ h2 {
 }
 
 nav {
-    margin: 2rem 0;
+    margin: 1.25rem 0;
 }
 
 nav a {
@@ -124,11 +123,20 @@ h4 {
     color: #444;
 }
 
-p {
+p, label {
     font-family: $body-font;
     font-size: 1rem;
-    margin-top: 1rem;
     line-height: 130%;
+    font-size: 1.25rem;
+    display: block;
+}
+
+label {
+    margin-bottom: 0.25rem;
+}
+
+p {
+    margin: 1rem 0;
 }
 
 #contact, #about {
@@ -139,6 +147,22 @@ p {
     display: block !important;
 }
 
+input, textarea {
+    display: block;
+    outline: none;
+    border: none;
+    padding: .25rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 80rem) {
     .grid-sizer, .grid-item {
         width: 45%;
@@ -147,12 +171,51 @@ p {
     .grid-item {
         margin-bottom: 5%;
     }
-
     .gutter-sizer {
         width: 5%;
     }
 
     header {
         padding: 3rem 2.5%;
+    }
+}
+
+@media (max-width: 50rem) {
+    body {
+        background: url({{page.header_image_url}}) center/cover no-repeat fixed;
+    }
+
+    header, section {
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    #about, #contact {
+        text-align: left;
+    }
+
+    header {
+        background: none;
+        height: auto;
+        padding: 7.5% 5% 2.5%;
+    }
+
+    .grid {
+        margin: auto;
+    }
+}
+
+@media (max-width: 40rem) {
+    .grid-sizer, .grid-item {
+        width: 100%;
+    }
+
+    header {
+        padding: 10% 5% 5%;
+    }
+
+    h1 {
+        font-size: 4rem;
     }
 }
