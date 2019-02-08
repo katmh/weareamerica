@@ -186,7 +186,6 @@ textarea {
 
     #page-header, section {
         width: 100%;
-        text-align: center;
         position: relative;
     }
 
@@ -198,6 +197,11 @@ textarea {
         background: none;
         height: auto;
         padding: 7.5% 5% 2.5%;
+        text-align: center;
+    }
+
+    article {
+        text-align: center;
     }
 
     .grid {
