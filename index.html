@@ -16,8 +16,7 @@
     </head>
 
     <body>
-        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+        <script src="js/scripts.js"></script>
 
         <header>
             <h1>{{site.title}}</h1>
@@ -25,7 +24,7 @@
 
             <nav>
                 {% for link in site.header_links %}
-                <a href="{{link.url}}" {% if link.id %}id="{{link.id}}"{% endif %} {% if link.active %}class="active"{% endif %}>{{link.title}}</a>
+                <a href="{{link.url | prepend:site.url }}" {% if link.id %}id="{{link.id}}"{% endif %} {% if link.active %}class="active"{% endif %}>{{link.title}}</a>
                 {% endfor %}
             </nav>
 

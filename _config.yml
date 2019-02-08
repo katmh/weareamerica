@@ -11,11 +11,11 @@ contact_blurb: Buy our book, let us know about speaking engagements. Fill out th
 
 header_links:
   - title: About
-    url: /#
+    url: "#"
     active: yes
     id: about-link
   - title: Contact
-    url: /#
+    url: "#"
     id: contact-link
   - title: Instagram
     id: contact-link
