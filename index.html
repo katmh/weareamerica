@@ -24,7 +24,7 @@
 
             <nav>
                 {% for link in site.header_links %}
-                <a href="{{link.url | prepend:site.url }}" {% if link.id %}id="{{link.id}}"{% endif %} {% if link.active %}class="active"{% endif %}>{{link.title}}</a>
+                <a {% if link.url %}href="{{link.url}}"{% endif %} {% if link.id %}id="{{link.id}}"{% endif %} {% if link.active %}class="active"{% endif %}>{{link.title}}</a>
                 {% endfor %}
             </nav>
 
