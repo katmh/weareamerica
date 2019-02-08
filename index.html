@@ -8,10 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="title" content="{{site.title}}">
-        <meta name="description" content="{{site.description}}"> 
+        <meta name="description" content="{{site.brief_description}}"> 
         <!--TODO: favicon-->
         <title>{{site.title}}</title>
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Oswald:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400|Staatliches" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
@@ -23,13 +23,32 @@
             <h1>{{site.title}}</h1>
             <h2>{{site.subtitle}}</h2>
 
-            <p>{{site.description}}</p>
-
             <nav>
                 {% for link in site.header_links %}
-                <a href="{{link.url}}" class="button">{{link.title}}</a>
+                <a href="{{link.url}}" {% if link.id %}id="{{link.id}}"{% endif %} {% if link.active %}class="active"{% endif %}>{{link.title}}</a>
                 {% endfor %}
             </nav>
+
+            <div id="about" class="visible">
+                <p>{{site.about_content}}</p>
+            </div>
+
+            <div id="contact">
+                <p>{{site.contact_blurb}}</p>
+
+                <form action="https://formspree.io/weareamericaLHS@gmail.com" method="POST">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+            </div>
         </header>
         
         <section>
@@ -44,7 +63,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>{{story.title}}</h3>
-                            <p>{{story.author}}</p>
+                            <h4>{{story.author}}</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -53,21 +72,10 @@
                     </div>
                 </article>
                 {% endfor %}
-
-                <!--<a class="button" id="more-stories-button">Show All Stories</a>-->
             </div>
         </section>
 
         <script>
-            /* hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
-            console.log(hiddenArticles);
-
-            document.getElementById('more-stories-button').addEventListener('click', function() {
-                hiddenArticles.forEach((article) => {
-                    article.classList.add('visible');
-                })
-            }); */
-
             var grid = document.querySelector('.grid');
             var msnry = new Masonry( grid, {
                 itemSelector: '.grid-item',
@@ -78,6 +86,21 @@
             imagesLoaded( grid ).on( 'progress', function() {
                 msnry.layout();
             });
+
+            var contactLink = document.getElementById('contact-link');
+            var aboutLink = document.getElementById('about-link');
+            var contactContent = document.getElementById('contact');
+            var aboutContent = document.getElementById('about');
+
+            function toggleContent() {
+                contactLink.classList.toggle('active');
+                aboutLink.classList.toggle('active');
+                contactContent.classList.toggle('visible');
+                aboutContent.classList.toggle('visible');
+            }
+
+            contactLink.addEventListener('click', toggleContent);
+            aboutLink.addEventListener('click', toggleContent);
         </script>
     </body>
 </html>

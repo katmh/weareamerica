@@ -8,7 +8,7 @@
         <meta name="description" content="Here's a paragraph about the project and website. I'm adding another sentence to increase the length of this placeholder."> 
         <!--TODO: favicon-->
         <title>We Are America</title>
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Oswald:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400|Staatliches" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
@@ -20,17 +20,36 @@
             <h1>We Are America</h1>
             <h2>Voices of the Nation's Future</h2>
 
-            <p>Here's a paragraph about the project and website. I'm adding another sentence to increase the length of this placeholder.</p>
-
             <nav>
                 
-                <a href="/about" class="button">About</a>
+                <a href="/#" id="about-link" class="active">About</a>
                 
-                <a href="https://instagram.com/lhsweareamerica" class="button">Instagram</a>
+                <a href="/#" id="contact-link" >Contact</a>
                 
-                <a href="" class="button">Contact Us</a>
+                <a href="https://instagram.com/lhsweareamerica" id="contact-link" >Instagram</a>
                 
             </nav>
+
+            <div id="about" class="visible">
+                <p>Full description about us, can be multiple paragraphs</p>
+            </div>
+
+            <div id="contact">
+                <p>Buy our book, let us know about speaking engagements. Fill out the form to reach us if you have any questions or comments.</p>
+
+                <form action="https://formspree.io/weareamericaLHS@gmail.com" method="POST">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+            </div>
         </header>
         
         <section>
@@ -45,7 +64,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>A Goodnight</h3>
-                            <p>Makayla Heang</p>
+                            <h4>Makayla Heang</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -60,7 +79,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Alvin and the Chipmunks</h3>
-                            <p>Alexia Cummings</p>
+                            <h4>Alexia Cummings</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -75,7 +94,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Puerto Rican and Proud</h3>
-                            <p>Alicia Gonzalez</p>
+                            <h4>Alicia Gonzalez</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -90,7 +109,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Retracing Myself</h3>
-                            <p>Aliyah Andino</p>
+                            <h4>Aliyah Andino</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -105,7 +124,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>An Iraqi Heart in America</h3>
-                            <p>Areej Jameel</p>
+                            <h4>Areej Jameel</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -120,7 +139,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Finding Home</h3>
-                            <p>Camila Garcia Marin</p>
+                            <h4>Camila Garcia Marin</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -135,7 +154,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Belonging</h3>
-                            <p>Diane Chikulu</p>
+                            <h4>Diane Chikulu</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -150,7 +169,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Playing Ball</h3>
-                            <p>Emil Mora</p>
+                            <h4>Emil Mora</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -165,7 +184,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Journey to Heaven</h3>
-                            <p>Ezequiel Nunez</p>
+                            <h4>Ezequiel Nunez</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -180,7 +199,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Survivor</h3>
-                            <p>Giulia Silveira</p>
+                            <h4>Giulia Silveira</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -195,7 +214,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Superheroes</h3>
-                            <p>Gustavo Figueiredo</p>
+                            <h4>Gustavo Figueiredo</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -210,7 +229,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Unnoticed</h3>
-                            <p>Idalisse Fernandez</p>
+                            <h4>Idalisse Fernandez</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -225,7 +244,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Select One?</h3>
-                            <p>Katherine Mary Huang</p>
+                            <h4>Katherine Mary Huang</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -240,7 +259,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Unlearning</h3>
-                            <p>Keely O'Beirne</p>
+                            <h4>Keely O'Beirne</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -255,7 +274,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>A Masked Paradise</h3>
-                            <p>Lucie Rwakabuba</p>
+                            <h4>Lucie Rwakabuba</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -270,7 +289,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>My Compass</h3>
-                            <p>Luixiana Gonzalez Vargas</p>
+                            <h4>Luixiana Gonzalez Vargas</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -285,7 +304,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Brownies and Oreos</h3>
-                            <p>Lynsey Ida Philippe</p>
+                            <h4>Lynsey Ida Philippe</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -300,7 +319,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Seeking Acceptance</h3>
-                            <p>Mariama Jalloh</p>
+                            <h4>Mariama Jalloh</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -315,7 +334,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Of Breads and Grandmas</h3>
-                            <p>Marida Meas</p>
+                            <h4>Marida Meas</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -330,7 +349,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>The Path I Painted</h3>
-                            <p>Monaliza Pace</p>
+                            <h4>Monaliza Pace</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -345,7 +364,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Wave</h3>
-                            <p>Monika Matsui</p>
+                            <h4>Monika Matsui</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -360,7 +379,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>We Still Have Work to Do</h3>
-                            <p>Philly Marte</p>
+                            <h4>Philly Marte</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -375,7 +394,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Blindness and Sorrow</h3>
-                            <p>Ricardo Vargas</p>
+                            <h4>Ricardo Vargas</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -390,7 +409,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>need title</h3>
-                            <p>Richard Thyne</p>
+                            <h4>Richard Thyne</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -405,7 +424,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>Endings</h3>
-                            <p>Selena Chau</p>
+                            <h4>Selena Chau</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -420,7 +439,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>need title</h3>
-                            <p>Thatsani Srithong</p>
+                            <h4>Thatsani Srithong</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -435,7 +454,7 @@
                     <div class="caption">
                         <div class="story-info">
                             <h3>need title</h3>
-                            <p>Yousif Albuset</p>
+                            <h4>Yousif Albuset</h4>
                         </div>
                         
                         <a class="play-circle">
@@ -444,21 +463,10 @@
                     </div>
                 </article>
                 
-
-                <!--<a class="button" id="more-stories-button">Show All Stories</a>-->
             </div>
         </section>
 
         <script>
-            /* hiddenArticles = document.querySelectorAll('#stories-container article:nth-child(n+6)');
-            console.log(hiddenArticles);
-
-            document.getElementById('more-stories-button').addEventListener('click', function() {
-                hiddenArticles.forEach((article) => {
-                    article.classList.add('visible');
-                })
-            }); */
-
             var grid = document.querySelector('.grid');
             var msnry = new Masonry( grid, {
                 itemSelector: '.grid-item',
@@ -469,6 +477,21 @@
             imagesLoaded( grid ).on( 'progress', function() {
                 msnry.layout();
             });
+
+            var contactLink = document.getElementById('contact-link');
+            var aboutLink = document.getElementById('about-link');
+            var contactContent = document.getElementById('contact');
+            var aboutContent = document.getElementById('about');
+
+            function toggleContent() {
+                contactLink.classList.toggle('active');
+                aboutLink.classList.toggle('active');
+                contactContent.classList.toggle('visible');
+                aboutContent.classList.toggle('visible');
+            }
+
+            contactLink.addEventListener('click', toggleContent);
+            aboutLink.addEventListener('click', toggleContent);
         </script>
     </body>
 </html>
