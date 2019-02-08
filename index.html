@@ -57,7 +57,7 @@
                 
                 {% for story in site.stories_data %}
                 <article class="story grid-item">
-                    <img src="{{story.photo_url | prepend:site.url}}" alt="{{story.author}}" class="portrait">
+                    <img src="{{story.photo_url | prepend:site.url}}" alt="{{story.author}}" class="lazy portrait">
 
                     <div class="caption">
                         <div class="story-info">
@@ -69,12 +69,31 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
+
+                    <div id="modal-1" aria-hidden="true">
+                        <div tabindex="-1" data-micromodal-close>
+                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
+                                <header>
+                                    <h2 id="modal-1-title">Modal Title</h2>
+                                    <button aria-label="Close modal" data-micromodal-close></button>
+                                </header>
+
+                                <div id="modal-1-content">
+                                    Modal Content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
                 {% endfor %}
             </div>
         </section>
 
         <script>
+            var myLazyLoad = new LazyLoad({
+                elements_selector: '.lazy'
+            });
+
             var grid = document.querySelector('.grid');
             var msnry = new Masonry( grid, {
                 itemSelector: '.grid-item',
