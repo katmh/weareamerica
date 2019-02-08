@@ -15,15 +15,15 @@
     <body>
         <script src="js/scripts.js"></script>
 
-        <header>
+        <header id="page-header">
             <h1>We Are America</h1>
             <h2>Voices of the Nation's Future</h2>
 
             <nav>
                 
-                <a href="http://localhost:4000#" id="about-link" class="active">About</a>
+                <a href="http://localhost:4000" id="about-link" class="active">About</a>
                 
-                <a href="http://localhost:4000#" id="contact-link" >Contact</a>
+                <a href="http://localhost:4000" id="contact-link" >Contact</a>
                 
                 <a href="http://localhost:4000https://instagram.com/lhsweareamerica" id="contact-link" >Instagram</a>
                 
@@ -52,12 +52,34 @@
         </header>
         
         <section>
+                <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                            <header class="modal__header">
+                              <h2 class="modal__title" id="modal-1-title">
+                                Micromodal
+                              </h2>
+                              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                            </header>
+                            <main class="modal__content" id="modal-1-content">
+                              <p>
+                                Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
+                              </p>
+                            </main>
+                            <footer class="modal__footer">
+                              <button class="modal__btn modal__btn-primary">Continue</button>
+                              <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
             <div id="stories-container" class="container grid">
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
                 
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Makayla-min.jpg" alt="Makayla Heang" class="lazy portrait">
 
                     <div class="caption">
@@ -70,24 +92,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Lexi-min.jpg" alt="Alexia Cummings" class="lazy portrait">
 
                     <div class="caption">
@@ -100,24 +107,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Alicia-min.jpg" alt="Alicia Gonzalez" class="lazy portrait">
 
                     <div class="caption">
@@ -130,24 +122,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Aliyah-min.jpg" alt="Aliyah Andino" class="lazy portrait">
 
                     <div class="caption">
@@ -160,24 +137,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Areej-min.jpg" alt="Areej Jameel" class="lazy portrait">
 
                     <div class="caption">
@@ -190,24 +152,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Camila-min.jpg" alt="Camila Garcia Marin" class="lazy portrait">
 
                     <div class="caption">
@@ -220,24 +167,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Diane-min.jpg" alt="Diane Chikulu" class="lazy portrait">
 
                     <div class="caption">
@@ -250,24 +182,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Emil-min.jpg" alt="Emil Mora" class="lazy portrait">
 
                     <div class="caption">
@@ -280,24 +197,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Ezequiel-min.jpg" alt="Ezequiel Nunez" class="lazy portrait">
 
                     <div class="caption">
@@ -310,24 +212,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Giulia-min.jpg" alt="Giulia Silveira" class="lazy portrait">
 
                     <div class="caption">
@@ -340,24 +227,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Gustavo-min.jpg" alt="Gustavo Figueiredo" class="lazy portrait">
 
                     <div class="caption">
@@ -370,24 +242,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Idalisse-min.jpg" alt="Idalisse Fernandez" class="lazy portrait">
 
                     <div class="caption">
@@ -400,24 +257,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Kat-min.jpg" alt="Katherine Mary Huang" class="lazy portrait">
 
                     <div class="caption">
@@ -430,24 +272,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Keely-min.jpg" alt="Keely O'Beirne" class="lazy portrait">
 
                     <div class="caption">
@@ -460,24 +287,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Lucie-min.jpg" alt="Lucie Rwakabuba" class="lazy portrait">
 
                     <div class="caption">
@@ -490,24 +302,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Lucy-min.jpg" alt="Luixiana Gonzalez Vargas" class="lazy portrait">
 
                     <div class="caption">
@@ -520,24 +317,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Lynsey-min.jpg" alt="Lynsey Ida Philippe" class="lazy portrait">
 
                     <div class="caption">
@@ -550,24 +332,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Mariama-min.jpg" alt="Mariama Jalloh" class="lazy portrait">
 
                     <div class="caption">
@@ -580,24 +347,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Marida-min.jpg" alt="Marida Meas" class="lazy portrait">
 
                     <div class="caption">
@@ -610,24 +362,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Mona-min.jpg" alt="Monaliza Pace" class="lazy portrait">
 
                     <div class="caption">
@@ -640,24 +377,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Monika-min.jpg" alt="Monika Matsui" class="lazy portrait">
 
                     <div class="caption">
@@ -670,24 +392,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Philly-min.jpg" alt="Philly Marte" class="lazy portrait">
 
                     <div class="caption">
@@ -700,24 +407,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Ricardo-min.jpg" alt="Ricardo Vargas" class="lazy portrait">
 
                     <div class="caption">
@@ -730,24 +422,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Ricky-min.jpg" alt="Richard Thyne" class="lazy portrait">
 
                     <div class="caption">
@@ -760,24 +437,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Selena-min.jpg" alt="Selena Chau" class="lazy portrait">
 
                     <div class="caption">
@@ -790,24 +452,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Thatsani-min.jpg" alt="Thatsani Srithong" class="lazy portrait">
 
                     <div class="caption">
@@ -820,24 +467,9 @@
                             <div class="play-triangle"></div>
                         </a>
                     </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </article>
                 
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="http://localhost:4000/portraits/Yousif-min.jpg" alt="Yousif Albuset" class="lazy portrait">
 
                     <div class="caption">
@@ -849,21 +481,6 @@
                         <a class="play-circle">
                             <div class="play-triangle"></div>
                         </a>
-                    </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </article>
                 
@@ -900,6 +517,8 @@
 
             contactLink.addEventListener('click', toggleContent);
             aboutLink.addEventListener('click', toggleContent);
+
+            MicroModal.init();
         </script>
     </body>
 </html>

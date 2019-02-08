@@ -18,7 +18,7 @@
     <body>
         <script src="js/scripts.js"></script>
 
-        <header>
+        <header id="page-header">
             <h1>{{site.title}}</h1>
             <h2>{{site.subtitle}}</h2>
 
@@ -51,12 +51,34 @@
         </header>
         
         <section>
+                <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                            <header class="modal__header">
+                              <h2 class="modal__title" id="modal-1-title">
+                                Micromodal
+                              </h2>
+                              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                            </header>
+                            <main class="modal__content" id="modal-1-content">
+                              <p>
+                                Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
+                              </p>
+                            </main>
+                            <footer class="modal__footer">
+                              <button class="modal__btn modal__btn-primary">Continue</button>
+                              <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
             <div id="stories-container" class="container grid">
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
                 
                 {% for story in site.stories_data %}
-                <article class="story grid-item">
+                <article class="story grid-item" data-micromodal-trigger="modal-1">
                     <img src="{{story.photo_url | prepend:site.url}}" alt="{{story.author}}" class="lazy portrait">
 
                     <div class="caption">
@@ -68,21 +90,6 @@
                         <a class="play-circle">
                             <div class="play-triangle"></div>
                         </a>
-                    </div>
-
-                    <div id="modal-1" aria-hidden="true">
-                        <div tabindex="-1" data-micromodal-close>
-                            <div role="dialog" aria-model="true" aria-labelledby="modal-1-title">
-                                <header>
-                                    <h2 id="modal-1-title">Modal Title</h2>
-                                    <button aria-label="Close modal" data-micromodal-close></button>
-                                </header>
-
-                                <div id="modal-1-content">
-                                    Modal Content
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </article>
                 {% endfor %}
@@ -119,6 +126,8 @@
 
             contactLink.addEventListener('click', toggleContent);
             aboutLink.addEventListener('click', toggleContent);
+
+            MicroModal.init();
         </script>
     </body>
 </html>
