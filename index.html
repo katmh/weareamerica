@@ -13,6 +13,7 @@
         <title>{{site.title}}</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:400|Staatliches" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
 
     <body>
@@ -129,6 +130,18 @@
             aboutLink.addEventListener('click', toggleContent);
 
             MicroModal.init();
+        </script>
+
+        <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
         </script>
     </body>
 </html>

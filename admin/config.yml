@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: "img/uploads" # Media files will be stored in the repo under img/uploads
+
+collections:
+  - name: "stories_data" # Used in routes, e.g. /admin/collections/stories_data
+    label: "Stories" # Used in the UI
+    folder: "_stories_data" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Photo URL", name: "photo_url", widget: "image"}
+      - {label: "Audio URL", name: "audio_url", widget: "string"}
