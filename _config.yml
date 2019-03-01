@@ -25,3 +25,6 @@ sass:
 collections:
   stories_data:
     output: true
+
+plugins:
+  - jekyll-manager

@@ -10,6 +10,7 @@
         <title>We Are America</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:400|Staatliches" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
 
     <body>
@@ -938,7 +939,7 @@
 
                     <div class="caption">
                         <div class="story-info">
-                            <h3>need title</h3>
+                            <h3>Break Through</h3>
                             <h4>Richard Thyne</h4>
                         </div>
                         
@@ -952,7 +953,7 @@
                     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
                         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-Richard-title">
                             <header class="modal__header">
-                                <h3 id="modal-Richard-title">need title</h3>
+                                <h3 id="modal-Richard-title">Break Through</h3>
                                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                             </header>
                             
@@ -1014,7 +1015,7 @@
 
                     <div class="caption">
                         <div class="story-info">
-                            <h3>need title</h3>
+                            <h3>Hard Work</h3>
                             <h4>Thatsani Srithong</h4>
                         </div>
                         
@@ -1028,7 +1029,7 @@
                     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
                         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-Thatsani-title">
                             <header class="modal__header">
-                                <h3 id="modal-Thatsani-title">need title</h3>
+                                <h3 id="modal-Thatsani-title">Hard Work</h3>
                                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                             </header>
                             
@@ -1052,7 +1053,7 @@
 
                     <div class="caption">
                         <div class="story-info">
-                            <h3>need title</h3>
+                            <h3>Thankful</h3>
                             <h4>Yousif Albuset</h4>
                         </div>
                         
@@ -1066,7 +1067,7 @@
                     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
                         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-Yousif-title">
                             <header class="modal__header">
-                                <h3 id="modal-Yousif-title">need title</h3>
+                                <h3 id="modal-Yousif-title">Thankful</h3>
                                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                             </header>
                             
@@ -1118,6 +1119,18 @@
             aboutLink.addEventListener('click', toggleContent);
 
             MicroModal.init();
+        </script>
+
+        <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
         </script>
     </body>
 </html>
