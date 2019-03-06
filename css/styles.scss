@@ -220,6 +220,10 @@ audio {
     #page-header {
         padding: 3rem 2.5%;
     }
+
+    .post {
+        width: 100%;
+    }
 }
 
 @media (max-width: 50rem) {
@@ -393,4 +397,8 @@ audio {
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+
+section {
+    background: #fff;
 }
