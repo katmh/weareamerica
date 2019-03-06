@@ -227,10 +227,6 @@ audio {
 }
 
 @media (max-width: 50rem) {
-    body {
-        background: url({{page.header_image_url}}) center/cover no-repeat fixed;
-    }
-
     #page-header, section {
         width: 100%;
         position: relative;
@@ -241,7 +237,6 @@ audio {
     }
 
     #page-header {
-        background: none;
         height: auto;
         padding: 7.5% 5% 2.5%;
         text-align: center;
@@ -397,8 +392,4 @@ audio {
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
-}
-
-section {
-    background: #fff;
 }
