@@ -52,6 +52,24 @@
         </header>
         
         <section>
+            {% if site.posts %}
+            <div id="posts-container" class="container">
+                {% for post in site.posts limit:1 %}
+                <article class="post">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                </article>
+                {% endfor %}
+
+                {% for post in site.posts offset:1 limit:1 %}
+                <article class="post">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                </article>
+                {% endfor %}
+            </div>
+            {% endif %}
+
             <div id="stories-container" class="container grid">
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
