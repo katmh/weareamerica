@@ -13,6 +13,7 @@ $body-font: Lato, Georgia, serif;
 
 #page-header {
     background: url({{page.header_image_url}}) center/cover no-repeat fixed;
+    background-size: cover;
     height: 100vh;
     width: 30%;
     position: fixed;
