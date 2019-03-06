@@ -34,5 +34,3 @@ header_links:
   url: https://instagram.com/lhsweareamerica
 sass:
   style: compressed
-plugins:
-- jekyll-manager
