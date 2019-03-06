@@ -1,30 +1,33 @@
+---
 title: We Are America
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  stories_data:
+    title: Stories Data
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 subtitle: Voices of the Nation's Future
-
-brief_description: Here's a paragraph about the project and website. I'm adding another sentence to increase the length of this placeholder.
-
+brief_description: Here's a paragraph about the project and website. I'm adding another
+  sentence to increase the length of this placeholder.
 about_content: Full description about us, can be multiple paragraphs
-
 url: https://katmh.com/weareamerica
-
-contact_blurb: Buy our book, let us know about speaking engagements. Fill out the form to reach us if you have any questions or comments.
-
+contact_blurb: Buy our book, let us know about speaking engagements. Fill out the
+  form to reach us if you have any questions or comments.
 header_links:
-  - title: About
-    active: yes
-    id: about-link
-  - title: Contact
-    id: contact-link
-  - title: Instagram
-    id: contact-link
-    url: https://instagram.com/lhsweareamerica
-
+- title: About
+  active: true
+  id: about-link
+- title: Contact
+  id: contact-link
+- title: Instagram
+  id: contact-link
+  url: https://instagram.com/lhsweareamerica
 sass:
   style: compressed
-
-collections:
-  stories_data:
-    output: true
-
 plugins:
-  - jekyll-manager
+- jekyll-manager
