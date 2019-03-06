@@ -114,6 +114,7 @@ h3, .modal__title {
     font-size: 2rem;
     line-height: 100%;
     margin-bottom: .4rem;
+    margin-right: 1rem;
 }
 
 h4 {
@@ -163,17 +164,6 @@ input, textarea {
 
 .button {
     width: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 1.25rem;
-    background: #343434;
-    color: #eee;
-    transition: .15s;
-}
-
-.button:hover, .button:active {
-    background: #444;
-    cursor: pointer;
 }
 
 textarea {
@@ -181,6 +171,23 @@ textarea {
     width: 100%;
     min-height: 3rem;
     margin-bottom: 1rem;
+}
+
+.has-audio:after {
+    content: "Click to Listen";
+    text-transform: uppercase;
+    font-family: $header-font;
+    font-size: 1rem;
+    width: 100%;
+    height: 20px;
+    display: block;
+    background: #633;
+    color: #eee;
+    padding: .3rem 1rem .2rem;
+}
+
+audio {
+    margin: 1rem 0;
 }
 
 @media (max-width: 80rem) {
@@ -288,8 +295,8 @@ textarea {
   
   .modal__header .modal__close:before { content: "\2715"; }
   
-  .modal__btn {
-    font-size: .875rem;
+  .modal__btn, .button {
+    font-size: 1.05rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: .5rem;
@@ -316,7 +323,7 @@ textarea {
     transition: transform .25s ease-out,-webkit-transform .25s ease-out;
   }
   
-  .modal__btn:focus, .modal__btn:hover {
+  .modal__btn:focus, .modal__btn:hover, .button:hover, .button:focus {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
