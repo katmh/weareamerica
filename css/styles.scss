@@ -133,7 +133,7 @@ h4 {
     color: #444;
 }
 
-p, label, input, textarea, a {
+p, label, input, textarea, section a, li {
     font-family: $body-font;
     font-size: 1.25rem;
     line-height: 140%;
@@ -395,4 +395,30 @@ audio {
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+
+.post-container {
+    padding: 2.5% 5% 5%;
+    color: #343434;
+}
+
+.post-container p, .post-container li, .post-container a {
+    font-weight: 400;
+}
+
+.post-container li {
+    margin: 1rem 0 1rem 2.5rem;
+}
+
+.post-container h1 {
+    font-size: 3rem;
+}
+
+.post-container h2 {
+    font-size: 2.2rem;
+}
+
+.post-container h1, .post-container h2 {
+    margin-top: 2.5rem;
+    color: #232323;
 }

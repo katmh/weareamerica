@@ -34,3 +34,16 @@ header_links:
   url: https://instagram.com/lhsweareamerica
 sass:
   style: compressed
+permalink: /posts/:title
+defaults:
+  - values:
+      layout: "default"
+defaults:
+  - values:
+      layout: "default"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"

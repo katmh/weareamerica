@@ -1,70 +1,15 @@
 ---
+layout: default
 ---
+<script src="js/scripts.js"></script>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="title" content="{{site.title}}">
-        <meta name="description" content="{{site.brief_description}}"> 
-        <!--TODO: favicon-->
-        <title>{{site.title}}</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:300|Staatliches" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    </head>
-
-    <body>
-        <script src="js/scripts.js"></script>
-
-        <header id="page-header">
-            <h1>{{site.title}}</h1>
-            <h2>{{site.subtitle}}</h2>
-
-            <nav>
-                {% for link in site.header_links %}
-                <a {% if link.url %}href="{{link.url}}"{% endif %} {% if link.id %}id="{{link.id}}"{% endif %} {% if link.active %}class="active"{% endif %}>{{link.title}}</a>
-                {% endfor %}
-            </nav>
-
-            <div id="about" class="visible">
-                <p>{{site.about_content}}</p>
-            </div>
-
-            <div id="contact">
-                <p>{{site.contact_blurb}}</p>
-
-                <form action="https://formspree.io/weareamericaLHS@gmail.com" method="POST">
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" id="name">
-
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email">
-
-                    <label for="message">Message: </label>
-                    <textarea name="message" id="message"></textarea>
-
-                    <input class="button" type="submit" value="Send">
-                </form>
-            </div>
-        </header>
-        
         <section>
             {% if site.posts %}
             <div id="posts-container" class="container">
                 {% for post in site.posts limit:1 %}
                 <article class="post">
                     <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt }}</p>
-                </article>
-                {% endfor %}
-
-                {% for post in site.posts offset:1 limit:1 %}
-                <article class="post">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt }}</p>
+                    <p>{{ post.excerpt | strip_html }} <a href="{{ post.url }}">Read More</a></p>
                 </article>
                 {% endfor %}
             </div>
@@ -166,5 +111,3 @@
             });
         }
         </script>
-    </body>
-</html>
