@@ -1,47 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="title" content="{{site.title}}">
-        <meta name="description" content="{{site.brief_description}}"> 
-        <!--TODO: favicon-->
-        <title>{{site.title}}</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Staatliches" rel="stylesheet">
-        <link rel="stylesheet" href="{{ '/css/styles.css' | prepend:site.url }}">
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="{{site.title}}" />
+    <meta name="description" content="{{site.brief_description}}" />
+    <!--TODO: favicon-->
+    <title>{{site.title}}</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Staatliches"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
 
-    <body>
-        <header id="page-header">
-            <a href="{{ site.url }}"><h1>{{ site.title }}</h1></a>
-            <h2>{{site.subtitle}}</h2>
+  <body>
+    <header id="page-header">
+      <a href="/"><h1>{{ site.title }}</h1></a>
+      <h2>{{site.subtitle}}</h2>
 
-            <nav>
-                {% for link in site.header_links %}
-                <a {% if link.url %}href="{{link.url}}"{% endif %} {% if link.id %}id="{{link.id}}"{% endif %} {% if link.active %}class="active"{% endif %}>{{link.title}}</a>
-                {% endfor %}
-            </nav>
+      <nav>
+        {% for link in site.header_links %}
+        <a
+          {%
+          if
+          link.url
+          %}href="{{link.url}}"
+          {%
+          endif
+          %}
+          {%
+          if
+          link.id
+          %}id="{{link.id}}"
+          {%
+          endif
+          %}
+          {%
+          if
+          link.active
+          %}class="active"
+          {%
+          endif
+          %}
+          >{{link.title}}</a
+        >
+        {% endfor %}
+      </nav>
 
-            <div id="about" class="visible">
-                <p>{{site.about_content}}</p>
-            </div>
+      <div id="about" class="visible">
+        <p>{{site.about_content}}</p>
+      </div>
 
-            <div id="contact">
-                <p>{{site.contact_blurb}}</p>
+      <div id="contact">
+        <p>{{site.contact_blurb}}</p>
 
-                <form action="https://formspree.io/weareamericaLHS@gmail.com" method="POST">
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" id="name">
+        <form
+          action="https://formspree.io/weareamericaLHS@gmail.com"
+          method="POST"
+        >
+          <label for="name">Name: </label>
+          <input type="text" name="name" id="name" />
 
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email">
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email" />
 
-                    <label for="message">Message: </label>
-                    <textarea name="message" id="message"></textarea>
+          <label for="message">Message: </label>
+          <textarea name="message" id="message"></textarea>
 
-                    <input class="button" type="submit" value="Send">
-                </form>
-            </div>
-        </header>
+          <input class="button" type="submit" value="Send" />
+        </form>
+      </div>
+    </header>
+  </body>
+</html>

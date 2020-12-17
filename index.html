@@ -1,113 +1,141 @@
 ---
 layout: default
 ---
+
 <script src="js/scripts.js"></script>
 
-        <section>
-            {% if site.posts %}
-            <div id="posts-container" class="container">
-                {% for post in site.posts limit:1 %}
-                <article class="post">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt | strip_html }} <a href="{{ post.url }}">Read More</a></p>
-                </article>
-                {% endfor %}
-            </div>
-            {% endif %}
+<section>
+  {% if site.posts %}
+  <div id="posts-container" class="container">
+    {% for post in site.posts limit:1 %}
+    <article class="post">
+      <h3>{{ post.title }}</h3>
+      <p>
+        {{ post.excerpt | strip_html }} <a href="{{ post.url }}">Read More</a>
+      </p>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
 
-            <div id="stories-container" class="container grid">
-                <div class="grid-sizer"></div>
-                <div class="gutter-sizer"></div>
-                
-                {% for story in site.stories_data %}
-                {% assign names = story.author | split: " " %}
+  <div id="stories-container" class="container grid">
+    <div class="grid-sizer"></div>
+    <div class="gutter-sizer"></div>
 
-                <article class="story grid-item {% if story.audio_url %}has-audio{% endif %}" data-micromodal-trigger="modal-{{names.first}}">
-                    <img src="{{story.photo_url | prepend:site.url }}" alt="{{story.author}}" class="lazy portrait">
+    {% for story in site.stories_data %} {% assign names = story.author | split:
+    " " %}
 
-                    <div class="caption">
-                        <div class="story-info">
-                            <h3>{{story.title}}</h3>
-                            <h4>{{story.author}}</h4>
-                        </div>
-                        
-                        <a class="play-circle">
-                            <div class="play-triangle"></div>
-                        </a>
-                    </div>
-                </article>
+    <article
+      class="story grid-item {% if story.audio_url %}has-audio{% endif %}"
+      data-micromodal-trigger="modal-{{names.first}}"
+    >
+      <img
+        src="{{story.photo_url}}"
+        alt="{{story.author}}"
+        class="lazy portrait"
+      />
 
-                {% if story.audio_url %}
-                <div class="modal micromodal-slide" id="modal-{{names.first}}" aria-hidden="true">
-                    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-                        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-{{names.first}}-title">
-                            <header class="modal__header">
-                                <h3 id="modal-{{names.first}}-title">{{story.title}}</h3>
-                                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                            </header>
-                            
-                            <main class="modal__content" id="modal-{{names.first}}-content">
-                                <h4>{{story.author}}</h4>
+      <div class="caption">
+        <div class="story-info">
+          <h3>{{story.title}}</h3>
+          <h4>{{story.author}}</h4>
+        </div>
 
-                                <audio controls preload="none">
-                                    <source src="{{ story.audio_url }}" type="audio/mp4" />
-                                    <p>Your browser does not support HTML5 audio.</p>
-                                </audio>
-                            </main>
-                        
-                            <footer class="modal__footer">
-                                <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                            </footer>
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </section>
+        <a class="play-circle">
+          <div class="play-triangle"></div>
+        </a>
+      </div>
+    </article>
 
-        <script>
-            var myLazyLoad = new LazyLoad({
-                elements_selector: '.lazy'
-            });
+    {% if story.audio_url %}
+    <div
+      class="modal micromodal-slide"
+      id="modal-{{names.first}}"
+      aria-hidden="true"
+    >
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-{{names.first}}-title"
+        >
+          <header class="modal__header">
+            <h3 id="modal-{{names.first}}-title">{{story.title}}</h3>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            ></button>
+          </header>
 
-            var grid = document.querySelector('.grid');
-            var msnry = new Masonry( grid, {
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-sizer',
-                gutter: '.gutter-sizer',
-                percentPosition: true
-            });
-            imagesLoaded( grid ).on( 'progress', function() {
-                msnry.layout();
-            });
+          <main class="modal__content" id="modal-{{names.first}}-content">
+            <h4>{{story.author}}</h4>
 
-            var contactLink = document.getElementById('contact-link');
-            var aboutLink = document.getElementById('about-link');
-            var contactContent = document.getElementById('contact');
-            var aboutContent = document.getElementById('about');
+            <audio controls preload="none">
+              <source src="{{ story.audio_url }}" type="audio/mp4" />
+              <p>Your browser does not support HTML5 audio.</p>
+            </audio>
+          </main>
 
-            function toggleContent() {
-                contactLink.classList.toggle('active');
-                aboutLink.classList.toggle('active');
-                contactContent.classList.toggle('visible');
-                aboutContent.classList.toggle('visible');
-            }
+          <footer class="modal__footer">
+            <button
+              class="modal__btn"
+              data-micromodal-close
+              aria-label="Close this dialog window"
+            >
+              Close
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</section>
 
-            contactLink.addEventListener('click', toggleContent);
-            aboutLink.addEventListener('click', toggleContent);
+<script>
+  var myLazyLoad = new LazyLoad({
+    elements_selector: ".lazy",
+  });
 
-            MicroModal.init();
-        </script>
+  var grid = document.querySelector(".grid");
+  var msnry = new Masonry(grid, {
+    itemSelector: ".grid-item",
+    columnWidth: ".grid-sizer",
+    gutter: ".gutter-sizer",
+    percentPosition: true,
+  });
+  imagesLoaded(grid).on("progress", function () {
+    msnry.layout();
+  });
 
-        <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-                });
-            }
-            });
-        }
-        </script>
+  var contactLink = document.getElementById("contact-link");
+  var aboutLink = document.getElementById("about-link");
+  var contactContent = document.getElementById("contact");
+  var aboutContent = document.getElementById("about");
+
+  function toggleContent() {
+    contactLink.classList.toggle("active");
+    aboutLink.classList.toggle("active");
+    contactContent.classList.toggle("visible");
+    aboutContent.classList.toggle("visible");
+  }
+
+  contactLink.addEventListener("click", toggleContent);
+  aboutLink.addEventListener("click", toggleContent);
+
+  MicroModal.init();
+</script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
